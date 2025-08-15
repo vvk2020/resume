@@ -1,14 +1,13 @@
 .container {
   display: flex;
+  align-items: center;
   border: 1px solid aqua;
 }
 
 .text-block {
   padding: 20px;
   width: 70%;
-  border: 1px solid lime;
   flex-shrink: 0;
-  border: 1px solid red;
 }
 
 .main-title {
@@ -26,8 +25,9 @@
 .person-data {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
   color: inherit;
+  font-size: clamp(0.875rem, 0.7045rem + 0.7273vw, 1.25rem);
 }
 
 .email-link {
@@ -41,11 +41,9 @@
 }
 
 .photo-wrapper {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-height: 265px; /* для ограничения незаполненного места в .text-block */
+  max-height: 300px; /* для ограничения незаполненного места в .text-block */
 }
 
 .photo {
@@ -53,7 +51,6 @@
   max-block-size: var(--rel-size-photo);
   max-inline-size: var(--rel-size-photo);
   object-fit: cover;
-  /* border: 1px solid yellow; */
   border-radius: 10%;
 }
 
@@ -64,6 +61,10 @@
   }
   .text-block {
     width: 100%;
+  }
+
+  .person-data {
+    gap: 10px;
   }
 
   .photo-wrapper {
