@@ -1,7 +1,11 @@
-.container {
+:host {
+  border: 2px solid brown;
   display: flex;
   align-items: center;
-  border: 1px solid aqua;
+  padding: 2%;
+  margin: 3%;
+  border-radius: 25px;
+  background-color: #e5daf8;
 }
 
 .text-block {
@@ -27,7 +31,7 @@
   flex-direction: column;
   gap: 20px;
   color: inherit;
-  font-size: clamp(0.875rem, 0.7045rem + 0.7273vw, 1.25rem);
+  font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
 }
 
 .email-link {
@@ -43,7 +47,7 @@
 .photo-wrapper {
   display: flex;
   justify-content: center;
-  max-height: 300px; /* для ограничения незаполненного места в .text-block */
+  max-height: var(--min-width);
 }
 
 .photo {
@@ -55,12 +59,18 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  :host {
     flex-direction: column;
     /* gap: 25px; */
   }
-  .text-block {
-    width: 100%;
+
+  .main-title,
+  .position {
+    font-size: clamp(1.875rem, 1.3068rem + 2.4242vw, 3.125rem);
+  }
+
+  .person-data {
+    font-size: clamp(1.0625rem, 0.8636rem + 0.8485vw, 1.5rem);
   }
 
   .person-data {
