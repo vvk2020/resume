@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  /* Стандартные цвета*/
+  --accent-color: #9d121e;
+  --text-color: #1e3d7b;
+
+  margin: 0;
+  font-family: SanFrancisco, sans-serif;
+  color: var(--text-color);
+  background-color: #e5daf8;
+
+  max-inline-size: 1000px;
+  min-inline-size: 250px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

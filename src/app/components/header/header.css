@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  border: 1px solid aqua;
+}
+
+.text-block {
+  padding: 20px;
+  width: 70%;
+  border: 1px solid lime;
+  flex-shrink: 0;
+  border: 1px solid red;
+}
+
+.main-title {
+  padding-block: 20px 10px;
+  color: var(--accent-color);
+  font-size: clamp(1.25rem, 0.8239rem + 1.8182vw, 2.1875rem);
+}
+
+.position {
+  padding-block: 10px 30px;
+  color: var(--accent-color);
+  font-size: clamp(1rem, 0.6023rem + 1.697vw, 1.875rem);
+}
+
+.person-data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: inherit;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.photo-wrapper {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 265px; /* для ограничения незаполненного места в .text-block */
+}
+
+.photo {
+  --rel-size-photo: 90%;
+  max-block-size: var(--rel-size-photo);
+  max-inline-size: var(--rel-size-photo);
+  object-fit: cover;
+  /* border: 1px solid yellow; */
+  border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* gap: 25px; */
+  }
+  .text-block {
+    width: 100%;
+  }
+
+  .photo-wrapper {
+    max-height: 100%;
+  }
+}

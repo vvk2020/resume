@@ -1,0 +1,21 @@
+<section class="container">
+  <div class="text-block">
+    <h1 class="main-title">{{ person | fullPersonlName | uppercase }}</h1>
+    <!-- В h1 можно обойтись только интерполяцией (без fullPersonlName) -->
+    <div class="position">{{ position | uppercase }}</div>
+    <div class="person-data">
+      <p>Дата рождения: {{ person.dateBird | date : "dd.MM.yyyy" }} г.</p>
+      <p>Город: {{ person.city }}</p>
+      <p>Телефон: {{ person.contacts.phone | phoneNumber }}</p>
+      <p>
+        Email:
+        <a href="mailto:{{ person.contacts.email }}" class="email-link">
+          {{ person.contacts.email }}
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="photo-wrapper">
+    <img src="/images/photo.jpg" alt="Фото Кузнецова В.В." class="photo" />
+  </div>
+</section>
