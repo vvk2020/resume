@@ -1,11 +1,11 @@
 :host {
-  border: 2px solid brown;
+  border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
   padding: 2%;
   margin: 3%;
   border-radius: 25px;
-  background-color: #e5daf8;
+  background-color: var(--card-bg);
 }
 
 .text-block {
@@ -17,7 +17,7 @@
 .main-title {
   padding-block: 20px 10px;
   color: var(--accent-color);
-  font-size: clamp(1.25rem, 0.8239rem + 1.8182vw, 2.1875rem);
+  font-size: clamp(1.5625rem, 1.3352rem + 0.9697vw, 2.0625rem);
 }
 
 .position {
@@ -61,7 +61,6 @@
 @media (max-width: 768px) {
   :host {
     flex-direction: column;
-    /* gap: 25px; */
   }
 
   .main-title,

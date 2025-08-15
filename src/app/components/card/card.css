@@ -1,0 +1,23 @@
+:host {
+  border: 2px solid var(--accent-color);
+  display: flex;
+  padding: 2%;
+  /* margin: 2%; */
+  border-radius: 25px;
+  background-color: var(--card-bg);
+}
+
+.card_title {
+  color: var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  inline-size: 40%;
+  /* border: 1px solid blue; */
+}
+
+.card_text {
+  padding: 1%;
+  color: var(--text-color);
+  border: 1px solid lime;
+  inline-size: 100%;
+  font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
+}
