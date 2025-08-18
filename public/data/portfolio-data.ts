@@ -6,22 +6,22 @@ export const PORTFOLIO_DATA = {
     city: 'Саранск',
     contacts: [
       {
-        name: "Телефон",
-        value: '79176932484',
+        text: "+7 (917) 693-24-84",
+        value: 'tel:+79176932484',
         logo: "images/logo/phone.svg"
       },
       {
-        name: "email",
+        text: "dev.vvk@yandex.ru",
         value: 'mailto:dev.vvk@yandex.ru',
         logo: "images/logo/yandex-mail.svg"
       },
       {
-        name: "github",
+        text: "https://github.com/vvk2020",
         value: "https://github.com/vvk2020",
         logo: "images/logo/github.svg",
       },
       {
-        name: "msteams",
+        text: "https://teams.live.com/meet/9342139911991?p=l79OCMaWVNhs0y4jeE",
         value: "https://teams.live.com/meet/9342139911991?p=l79OCMaWVNhs0y4jeE",
         logo: "images/logo/ms-teams.svg"
       },

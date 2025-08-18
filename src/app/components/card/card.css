@@ -22,3 +22,14 @@
   inline-size: 100%;
   font-size: clamp(1rem, 0.8864rem + 0.4848vw, 1.25rem);
 }
+
+@media (max-width: 768px) {
+  :host {
+    flex-direction: column;
+  }
+
+  .card_title {
+    border-right: none;
+
+  }
+}

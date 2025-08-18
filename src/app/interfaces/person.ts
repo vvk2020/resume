@@ -1,11 +1,11 @@
 /**
  * Контакт. Если logo есть, то выводится в виде (logo+value), если нет - то (name+value)
- * @property {string} name - наименование типа контакта ("Телефон")
- * @property {string} value - значение контакта ('79176932484')
+ * @property {string} text - текстовое описание контакта ('+7 (917) 693-24-84')
+ * @property {string} value - значение контакта ('tel:+79176932484')
  * @property {string} [logo] - ссылка на логотип типа контакта
  */
 export interface IContact {
-  name: string;
+  text: string;
   value: string;
   logo?: string;
 }
