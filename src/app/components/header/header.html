@@ -1,0 +1,32 @@
+<div class="photo-wrapper">
+  <img src="/images/photo.jpg" alt="Фото Кузнецова В.В." class="photo" />
+</div>
+<div class="text-block">
+  <h1 class="main-title">{{ person | fullPersonlName | uppercase }}</h1>
+  <!-- В h1 можно обойтись только интерполяцией (без fullPersonlName) -->
+  <div class="position">{{ position | uppercase }}</div>
+  <div class="person-data">
+    @if (person.dateBird) {
+    <p>Дата рождения: {{ person.dateBird | date : "dd.MM.yyyy" }}</p>
+    }
+    <p>Город: {{ person.city }}</p>
+
+    @if (person.contacts.length) {
+    <p>Контакты:</p>
+    <ul class="contacts">
+      @for (contact of person.contacts; track $index) {
+      <li class="contacts__item">
+        <a href="{{ contact.value }}" class="link">
+          <img
+            src="{{ contact.logo }}"
+            alt="{{ contact.name }}"
+            class="contacts__logo-image"
+          />
+          <span class="contacts__value">{{ contact.value }}</span>
+        </a>
+      </li>
+      }
+    </ul>
+    }
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<section class="education">
+  <ul>
+    @for (edu of education; track $index) {
+    <li>
+      <h3>{{ edu.speciality }}</h3>
+      <p>Организация: {{ edu.organization }}</p>
+      <p>Квалификация: {{ edu.qualification }}</p>
+    </li>
+    }
+  </ul>
+</section>

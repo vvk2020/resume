@@ -1,0 +1,38 @@
+<section class="job">
+  <ul>
+    @for (job of experience; track $index) {
+    <li>
+      <!-- Должность -->
+      <h3>{{ job.position }}</h3>
+      <!-- Организация -->
+      <h4>Организация: {{ job.company }}</h4>
+      <!-- Обязанности -->
+      @if (job.options?.length) {
+      <article class="responsibilities">
+        <h4>Обязанности:</h4>
+        <ul>
+          @for (opt of job.options; track opt) {
+          <li>{{ opt }}</li>
+          }
+        </ul>
+      </article>
+      }
+      <!-- Достижения -->
+      <h4>Ресурсы:</h4>
+      @if (job.achievements?.length) {
+      <ul>
+        @for (ach of job.achievements; track $index) {
+        <li>
+          @if (ach.url) {
+          <a [href]="ach.url">{{ ach.description }}</a>
+          } @else {
+          <p>{{ ach.description }}</p>
+          }
+        </li>
+        }
+      </ul>
+      }
+    </li>
+    }
+  </ul>
+</section>
