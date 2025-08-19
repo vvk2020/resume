@@ -10,7 +10,20 @@
     <p>Дата рождения: {{ person.dateBird | date : "dd.MM.yyyy" }}</p>
     }
     <p>Город: {{ person.city }}</p>
+    <p>Уровень английского язка: {{ person.engLevel }}</p>
 
+    <!-- Цели посещения курса -->
+    @if (person.course.goals.length) {
+    <p>Цели посещения курса:</p>
+    <ul>
+      @for (goal of person.course.goals; track $index) {
+      <li>{{ goal }}</li>
+      }
+    </ul>
+    }
+    <p>Источник информации о курсе: {{ person.course.howKnow }}</p>
+
+    <!-- Контакты -->
     @if (person.contacts.length) {
     <p class="contacts__title">Контакты:</p>
     <ul class="contacts__list">

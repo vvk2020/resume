@@ -10,10 +10,11 @@ import { IEducation } from './interfaces/education';
 import { Education } from './components/education/education';
 import { Skill } from './types/skills';
 import { Skills } from './components/skills/skills';
+import { Projects } from './components/projects/projects';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Card, CardsList, Education, Experience, Skills],
+  imports: [RouterOutlet, Header, Card, CardsList, Education, Experience, Skills, Projects],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

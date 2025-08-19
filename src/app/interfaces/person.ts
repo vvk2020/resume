@@ -11,17 +11,30 @@ export interface IContact {
 }
 
 /**
+ * Цели посещения курса
+ * @property {string[]} goals - цели посещения курса
+ * @property {string} howKnow - откуда унал о курсе
+ */
+export interface ICourse {
+  goals: string[];
+  howKnow: string;
+}
+
+/**
  * Кандидат
  * @property {string} firstName - имя кандидата
  * @property {string} [lastName] - отчество
  * @property {string} surName - фамилия
  * @property {string} [dateBird] - дата рождения
  * @property {string} [city] - город проживания
+ * @property {string} engLevel - уровень английского
  * @property {Object} contacts - контактные данные
  * @property {string} contacts.phone - номер телефона
  * @property {string} contacts.email - email
  * @property {string} contacts.github - github
  * @property {string} contacts.msteams - ms teams
+ * @property {ICourse} course - цели посещения курса
+ *
  */
 export interface IPerson {
   firstName: string,
@@ -29,5 +42,7 @@ export interface IPerson {
   surName: string,
   dateBird?: string;
   city?: string;
-  contacts: IContact[]
+  engLevel: string;
+  contacts: IContact[];
+  course: ICourse;
 }

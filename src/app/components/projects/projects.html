@@ -1,0 +1,41 @@
+<section class="projects">
+  <!-- Коммерческие проекты -->
+  @if (projects.commercial?.length) {
+  <h3>Коммерческие проекты</h3>
+  <article>
+    <ul>
+      @for (compro of projects.commercial; track $index) {
+      <li>
+        <!-- Название проекта -->
+        <h4>
+          <a href="{{ compro.url }}">{{ compro.title }}</a>
+          | {{ compro.year | date : "MM/yyyy " }}
+        </h4>
+        <!-- Описание проекта -->
+        <p>{{ compro.description }}</p>
+      </li>
+      }
+    </ul>
+  </article>
+  }
+
+  <!-- Pet-проекты -->
+  @if (projects.pet?.length) {
+  <h3>Pet-проекты</h3>
+  <article>
+    <ul>
+      @for (petpro of projects.pet; track $index) {
+      <li>
+        <!-- Название проекта -->
+        <h4>
+          <a href="{{ petpro.url }}">{{ petpro.title }}</a>
+          | {{ petpro.year | date : "MM/yyyy " }}
+        </h4>
+        <!-- Описание проекта -->
+        <p>{{ petpro.description }}</p>
+      </li>
+      }
+    </ul>
+  </article>
+  }
+</section>

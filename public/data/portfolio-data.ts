@@ -4,6 +4,7 @@ export const PORTFOLIO_DATA = {
     lastName: 'Викторович',
     surName: 'Кузнецов',
     city: 'Саранск',
+    engLevel: "B1",
     contacts: [
       {
         text: "+7 (917) 693-24-84",
@@ -25,7 +26,15 @@ export const PORTFOLIO_DATA = {
         value: "https://teams.live.com/meet/9342139911991?p=l79OCMaWVNhs0y4jeE",
         logo: "images/logo/ms-teams.svg"
       },
-    ]
+    ],
+    course:
+    {
+      goals: [
+        "углубление знаний и развитие навыков работы с фрейвороком Angular",
+        "изучение особенностей работы с RxJS, сигналами, окружением, Change Detection и DI",
+      ],
+      howKnow: "интернет, коллеги"
+    }
   },
   position: 'Angular-разработчик',
   education: [
@@ -80,8 +89,8 @@ export const PORTFOLIO_DATA = {
       ],
     },
     {
-      position: 'Программист',
-      company: 'ФГБУ «Государственный центр агрохимической службы «Мордовский»',
+      position: "Программист",
+      company: "ФГБУ «Государственный центр агрохимической службы «Мордовский»",
       options: [
         "Разработка и поддержка приложения «КОРМА» для анализа состава образцов почв Республики Мордовия"
       ],
@@ -110,5 +119,54 @@ export const PORTFOLIO_DATA = {
     "Коммуникабельность",
     "Стрессоустойчивость",
     "Умение работать в команде",
-  ]
+  ],
+  projects: {
+    commercial: [
+      {
+        title: "Сайт магазина товаров для собак",
+        description: "Точная верстка сайта по Figma-макету. Стек: HTML, CSS",
+        url: "https://vvk2020.github.io/dog-copilot/",
+        year: "2025-02-01",
+      },
+      {
+        title: "Cайт лаборатории кафедры",
+        description: "Первая версия сайта. Стек: HTML, CSS",
+        url: "https://estprm.ru/",
+        year: "2019-09-01",
+      }
+    ],
+    pet: [
+      {
+        title: "Сайт-фотогалерея «Место»",
+        description: "Верстка по Figma-макету | HTML, CSS, JS",
+        url: "https://vvk2020.github.io/mesto-project-ff",
+        year: "2025-04-01",
+      },
+      {
+        title: "Закрывающий тег",
+        description: "Верстка по Figma-макету, декорирование, анимации, адаптивность, доступность | HTML, CSS, JS",
+        url: "https://vvk2020.github.io/zakrivayuschiy-teg-f/",
+        year: "2025-01-01",
+      },
+      {
+        title: "no focus",
+        description: "Верстка по Figma-макету, анимации, темная / светлая темы, адаптивность | HTML, CSS, JS.",
+        url: "https://vvk2020.github.io/slozhno-sosredotochitsya-fd/",
+        year: "2024-12-01",
+      },
+      {
+        title: "Посмотри в окно",
+        description: "Верстка по Figma-макету, работа с видеоконтентом | HTML, CSS, JS",
+        url: "https://vvk2020.github.io/posmotri_v_okno/",
+        year: "2024-09-01",
+      },
+      {
+        title: "Frendy cookies",
+        description: "Магазин продажи печенья | HTML, CSS, TypeScript, Angular",
+        url: "https://vvk2020.github.io/cookies/",
+        year: "2024-06-01",
+      },
+
+    ],
+  }
 };

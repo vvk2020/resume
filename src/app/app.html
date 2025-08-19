@@ -1,6 +1,9 @@
 <app-header></app-header>
 
 <app-cards-list>
+
+
+
   <!-- Образование -->
   @if (education) {
   <app-card>
@@ -20,7 +23,7 @@
   <!-- Профессиональные навыки -->
   @if (hardSkills.length) {
   <app-card>
-    <h2 class="cardTitle">Профессиональные навыки</h2>
+    <h2 class="cardTitle">Навыки</h2>
     <app-skills [skills]="hardSkills"></app-skills>
   </app-card>
   }
@@ -35,7 +38,7 @@
 
   <!-- Дополнительная информация -->
   <app-card>
-    <h2 class="cardTitle">Дополнительная информация</h2>
-    <div>Description</div>
+    <h2 class="cardTitle">Разработки</h2>
+    <app-projects></app-projects>
   </app-card>
 </app-cards-list>

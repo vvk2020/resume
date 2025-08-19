@@ -4,6 +4,7 @@ import { PORTFOLIO_DATA } from '../../../public/data/portfolio-data';
 import { IExperience } from '../interfaces/experience';
 import { IEducation } from '../interfaces/education';
 import { Skill } from '../types/skills';
+import { IProjects } from '../interfaces/projects';
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,11 @@ export class Data {
   // Личные качества
   get softSkills(): Skill[] {
     return PORTFOLIO_DATA.softSkills;
+  }
+
+  // Реализованные проекты
+  get projects(): IProjects {
+    return PORTFOLIO_DATA.projects;
   }
 
 }
